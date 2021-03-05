@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   listarPokemons() {
+    console.log("to aqui");
     console.log(this.pokemons);
     this.servico.getPokemons().subscribe(resposta => this.pokemons = resposta);
   }

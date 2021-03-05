@@ -9,13 +9,13 @@ import { Pokemon } from '../Pokemon';
 })
 export class AllserviceService {
 
-  API = 'https://pokeapi.co/api/v2/pokemon/';
+  API = 'http://localhost:8080/pokemons';
 
 
   constructor(private http: HttpClient) { }
 
   public getPokemons(): Observable<Pokemon[]> {
-  return this.http.get<Pokemon[]>('https://pokeapi.co/api/v2/pokemon/');
+  return this.http.get<Pokemon[]>(this.API);
   }
 
 }
